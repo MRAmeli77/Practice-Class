@@ -10,13 +10,13 @@ namespace PracticeClass
     {
         //variables
         private string id;
-        private string firstName { get; }
-        private string lastName { get; }
+        private string firstName;
+        private string lastName;
         private int numberYearFromStart;
         private bool term;
         //1 = student, 2 = TA
         private int accessLevel;
-        //to access app database
+        //to access to app database
         private database_practiceclassEntities database;
 
         //methods
@@ -32,7 +32,12 @@ namespace PracticeClass
         //returns student homePage's list of classes as a list of struct "ShowClass"
         public override string GetID()
         {
-           return this.id;
+            return this.id;
+        }
+        //return full name
+        public override string GetFullName()
+        {
+            return firstName + ' ' + lastName;
         }
         public override int GetAccessLevel()
         {

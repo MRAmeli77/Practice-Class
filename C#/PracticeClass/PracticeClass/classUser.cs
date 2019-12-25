@@ -8,8 +8,8 @@ namespace PracticeClass
 {
     abstract class classUser
     {
-        //does nothing
         public abstract string GetID();
+        public abstract string GetFullName();
         public abstract int GetAccessLevel();
     }
 }

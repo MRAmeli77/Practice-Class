@@ -26,17 +26,6 @@ namespace PracticeClass
             //term=this.database.table_systemDatas.termNow;
             //numberYearFromStart= this.database.table_systemDatas.numberYearNow;
         }
-        //login method and creater of professor
-        public classProfessor LoginProfessor(string id, string password)
-        {
-            //first check if user exists as a professor then check if password is true
-            if (database.table_professor.Any(user => user.idProfessor == id) && database.table_user.Any(user => user.idUser == id && user.password == password))
-            {
-                //return professor if user is valid
-                return true;
-            }
-        }
-        //login method and creater of professor
         public classStudent LoginStudent(string id, string password)
         {
             //first check if user exists as a Student then check if password is true
@@ -47,19 +36,29 @@ namespace PracticeClass
             }
             return null;
         }
-
         //return true if user is a TA for a Class or some classes
         public bool IsTA(string id)
         {
-            //return true if exist a class that (TA id = this is)
+            //return true if exist a class that (TA id = this.id)
             return database.table_practiceclass.Any(Practiceclass => Practiceclass.idTA == id);
         }
-        //return true if user is a PrimeProfessor
+        /* //login method and creater of professor
+         public classProfessor LoginProfessor(string id, string password)
+         {
+             //first check if user exists as a professor then check if password is true
+             if (database.table_professor.Any(user => user.idProfessor == id) && database.table_user.Any(user => user.idUser == id && user.password == password))
+             {
+                 //return professor if user is valid
+                 return true;
+             }
+         }*/
+        //login method and creater of professor
+        /* //return true if user is a PrimeProfessor
         //not implemeted yet...
         public bool IsPrimeProfessor(string id)
         {
             return false;
-        }
+        }*/
     }
 }
 
