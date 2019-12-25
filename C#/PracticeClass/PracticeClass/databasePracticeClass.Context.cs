@@ -48,5 +48,6 @@ namespace PracticeClass
         public virtual DbSet<viewstudentlistclass> viewstudentlistclass { get; set; }
         public virtual DbSet<viewstudentlistpractice> viewstudentlistpractice { get; set; }
         public virtual DbSet<viewstudentlistquiz> viewstudentlistquiz { get; set; }
+
     }
 }
