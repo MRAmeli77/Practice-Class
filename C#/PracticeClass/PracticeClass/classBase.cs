@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 
 namespace PracticeClass
 {
+    //taples of ClassList
     struct ShowClass
     {
         public string nameCourse;
         public string fullNameTA;
         public string fullNameProfessor;
+    }
+    //taples of QuizList
+    struct ShowQuiz
+    {
+        public DateTime date;
+        public int number; 
+    }
+    //taples of PracticeList
+    struct ShowPractice
+    {
+        public int number;
+        public string link;
+        public int part;
+        public string idUploader;
     }
     class classBase
     {

@@ -45,7 +45,6 @@ namespace PracticeClass
         }
         public List<ShowClass> GetStudentClassesList()
         {
-            List<ShowClass> result = new List<ShowClass>();
             //select values from database
             var practiceClasses = from practiceClass in database.viewstudentlistclass
                                   where (
@@ -61,7 +60,7 @@ namespace PracticeClass
                                       fullNameProfessor = practiceClass.proffnam + ' ' + practiceClass.proflnam
                                   };
             //add values to list
-
+            List<ShowClass> result = new List<ShowClass>();
             foreach (var item in practiceClasses)
                 result.Add(new ShowClass { nameCourse = item.nameCourse, fullNameTA = item.fullNameTA, fullNameProfessor = item.fullNameProfessor });
             return result;

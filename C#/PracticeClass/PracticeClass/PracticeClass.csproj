@@ -73,6 +73,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="classBase.cs" />
+    <Compile Include="classPracticeClass.cs" />
     <Compile Include="classStudent.cs" />
     <Compile Include="classUser.cs" />
     <Compile Include="databasePracticeClass.cs">
